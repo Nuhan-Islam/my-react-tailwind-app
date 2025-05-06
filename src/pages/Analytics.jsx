@@ -40,7 +40,7 @@ function Analytics() {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 border-1 rounded-3xl p-5 mt-10 w-full">
       <h1 className="text-3xl font-bold text-gray-800">Analytics</h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="bg-white p-6 rounded-lg shadow-lg">

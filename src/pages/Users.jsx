@@ -3,10 +3,17 @@ function Users() {
       { id: 1, name: 'Alice Smith', email: 'alice@example.com', role: 'Admin' },
       { id: 2, name: 'Bob Johnson', email: 'bob@example.com', role: 'User' },
       { id: 3, name: 'Charlie Brown', email: 'charlie@example.com', role: 'Editor' },
+      { id: 4, name: 'Charlie Brown', email: 'charlie@example.com', role: 'Editor' },
+      { id: 5, name: 'Charlie Brown', email: 'charlie@example.com', role: 'Editor' },
+      { id: 6, name: 'Charlie Brown', email: 'charlie@example.com', role: 'Editor' },
+      { id: 7, name: 'Charlie Brown', email: 'charlie@example.com', role: 'Editor' },
+      { id: 8, name: 'Charlie Brown', email: 'charlie@example.com', role: 'Editor' },
+      { id: 9, name: 'Charlie Brown', email: 'charlie@example.com', role: 'Editor' },
+      { id: 10, name: 'Charlie Brown', email: 'charlie@example.com', role: 'Editor' },
     ];
   
     return (
-      <div className="space-y-6">
+      <div className="space-y-6 border-1 rounded-3xl p-5 mt-10">
         <h1 className="text-3xl font-bold text-gray-800">Users</h1>
         <div className="bg-white p-6 rounded-lg shadow-lg">
           <table className="w-full table-auto">
