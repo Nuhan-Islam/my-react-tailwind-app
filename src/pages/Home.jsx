@@ -9,10 +9,10 @@ import './scrollbar.css';
 
 
 const user = {
-  name: 'Tom Cook',
-  email: 'tom@example.com',
+  name: 'Nuhan Islam',
+  email: 'nuhan@itcbd.com',
   imageUrl:
-    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    './src/assets/user.jpeg',
 }
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
@@ -84,7 +84,29 @@ export default function Example() {
                 </a>
               ))}
             </nav>
-
+          </div>
+          <div className="border-t border-gray-800 p-4">
+            <Menu as="div" className="relative">
+              <MenuButton className="flex items-center w-full rounded-md px-2 py-2 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <img src={user.imageUrl} alt={user.name} className="size-8 rounded-full mr-3" />
+                <div className="flex-1 text-left">
+                  <div className="text-sm font-medium">{user.name}</div>
+                  <div className="text-xs text-gray-400">{user.email}</div>
+                </div>
+              </MenuButton>
+              <MenuItems className="absolute left-0 bottom-12 mb-2 w-48 origin-bottom-left rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 focus:outline-none z-20">
+                {userNavigation.map((item) => (
+                  <MenuItem key={item.name}>
+                    <a
+                      href={item.href}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    >
+                      {item.name}
+                    </a>
+                  </MenuItem>
+                ))}
+              </MenuItems>
+            </Menu>
           </div>
         </aside>
         <div className="flex-1 flex flex-col">
@@ -226,23 +248,11 @@ export default function Example() {
 
           <main className='overflow-y-auto'>
             <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-              <div className="border-1 flex flex-col gap-2 p-8 sm:flex-row sm:items-center sm:gap-6 sm:py-4 ...">
-                <img className="mx-auto block h-24 rounded-full sm:mx-0 sm:shrink-0" src="./src/assets/user.jpeg" alt="" />
-                <div className="space-y-2 text-center sm:text-left">
-                  <div className="space-y-0.5">
-                    <p className="text-lg font-semibold text-black">Erin Lindford</p>
-                    <p className="font-medium text-gray-500">Product Engineer</p>
-                  </div>
-                  <button className="border-purple-200 text-purple-600 hover:border-transparent hover:bg-purple-600 hover:text-white active:bg-purple-700 ...">
-                    Message
-                  </button>
-                </div>
-              </div>
               <MyFieldset />
               <Analytics />
               <SDKs />
               <Users />
-
+              {/* <img className="mx-auto block h-24 rounded-full sm:mx-0 sm:shrink-0" src="./src/assets/user.jpeg" alt="" /> */}
             </div>
           </main>
         </div>
